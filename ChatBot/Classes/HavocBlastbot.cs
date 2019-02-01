@@ -153,12 +153,23 @@ namespace ChatBot
                 case "!help":
                 {
                     client.SendMessage(TwitchInfo.ChannelName, "The current implemented commands are: \n 1) !Hello (Allows HavocBot to say Hi!) \n2) !schedule (Gives information about XxHavocBlastXx's schedule for streaming \n3) !twitter (Prints out a link to XxHavocBlastXx's Twitter) " +
-                        "\n4) !currentProject (Gives everyone current information based on XxHavocBlastXx's current project he is working on \n5) !devTools (Displays what current tools XxHavocBlastXx is currently using for work");
+                        "\n4) !currentProject (Gives everyone current information based on XxHavocBlastXx's current project he is working on \n5) !devTools (Displays what current tools XxHavocBlastXx is currently using for work)");
                 }
                     break;
                 case "!donate":
                 {
                         client.SendMessage(TwitchInfo.ChannelName, "You can donate via patreon: https://www.patreon.com/ or my tip page: https://streamlabs.com/xxhavocblastxx");
+                }
+                    break;
+                case "!discord":
+                {
+                    client.SendMessage(TwitchInfo.ChannelName, "You can join our Discord here: https://discord.gg/C2BU3eH");
+                }
+                    break;
+                case "!ban":
+                {
+                    
+                    client.BanUser(TwitchInfo.ChannelName, e.ChatMessage.Username, "You have been banned");
                 }
                     break;
                 case "!leave":
